@@ -1,17 +1,15 @@
 package ie.atu;
 
 import java.io.*;
+import java.nio.file.Path;
 
 public class week8 {
     public static void main(String[] args){
-        {
-            File myFile = new File("MyFile.txt");
-            System.out.println("My file is located at " + myFile.getAbsolutePath());
-            String content = "Details to write";
-                try
+
+        try
                 {
-                    FileWriter myWriter = new FileWriter(myFile, true);
-                    myWriter.write("Coding");
+                    PrintWriter myWriter = new PrintWriter(new FileWriter("names.txt", true));
+                    myWriter.write("hello");
                     myWriter.close();
                 } catch (IOException e)
                 {
@@ -20,8 +18,10 @@ public class week8 {
 
 
 
+
+
         }
 
 
     }
-}
+
